@@ -44,10 +44,23 @@ type AtStatus struct {
 	Phase string `json:"phase,omitempty"`
 }
 
-type NetworkServiceManager struct {
+// +genclient
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// At runs a command at a given schedule.
+type At struct {
 	metaV1.TypeMeta   `json:",inline"`
 	metaV1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   NetworkServiceManagerSpec   `json:"spec"`
-	Status NetworkServiceManagerStatus `json:"status"`
+	Spec   AtSpec   `json:"spec,omitempty"`
+	Status AtStatus `json:"status,omitempty"`
+}
+
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// AtList contains a list of At
+type AtList struct {
+	metaV1.TypeMeta `json:",inline"`
+	metaV1.ListMeta `json:"metadata,omitempty"`
+	Items           []At `json:"items"`
 }
