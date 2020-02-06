@@ -16,6 +16,8 @@ limitations under the License.
 
 package v1alpha1
 
+import metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
 // +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
@@ -40,4 +42,12 @@ type AtStatus struct {
 	// Phase represents the state of the schedule: until the command is
 	// executed it is PENDING, afterwards it is DONE.
 	Phase string `json:"phase,omitempty"`
+}
+
+type NetworkServiceManager struct {
+	metaV1.TypeMeta   `json:",inline"`
+	metaV1.ObjectMeta `json:"metadata,omitempty"`
+
+	Spec   NetworkServiceManagerSpec   `json:"spec"`
+	Status NetworkServiceManagerStatus `json:"status"`
 }
