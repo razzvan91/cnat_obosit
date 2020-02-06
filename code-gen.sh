@@ -1,5 +1,5 @@
 # ROOT_PACKAGE :: the package (relative to $GOPATH/src) that is the target for code generation
-ROOT_PACKAGE="github.com/razzvan91/repo_obosit"
+ROOT_PACKAGE="github.com/razzvan91/cnat_obosit"
 # CUSTOM_RESOURCE_NAME :: the name of the custom resource that we're generating client code for
 CUSTOM_RESOURCE_NAME="cnat"
 # CUSTOM_RESOURCE_VERSION :: the version of the resource

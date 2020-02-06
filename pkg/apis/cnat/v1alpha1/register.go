@@ -21,7 +21,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	cnatcontroller "github.com/razzvan91/repo_obosit/pkg/apis/cnat"
+	cnatcontroller "github.com/razzvan91/cnat_obosit/pkg/apis/cnat"
 )
 
 // SchemeGroupVersion is group version used to register these objects
@@ -47,8 +47,8 @@ var (
 // Adds the list of known types to Scheme.
 func addKnownTypes(scheme *runtime.Scheme) error {
 	scheme.AddKnownTypes(SchemeGroupVersion,
-		&Foo{},
-		&FooList{},
+		&AtSpec{},
+		&AtStatus{},
 	)
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil
