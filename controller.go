@@ -19,35 +19,35 @@ package main
 //
 //import (
 //	"fmt"
-//	//_ "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1"
+//	//_ "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1alpha1"
 //	clientset "github.com/razzvan91/cnat_obosit/pkg/client/clientset/versioned"
 //	"time"
 //
-//	appsv1 "k8s.io/api/apps/v1"
-//	corev1 "k8s.io/api/core/v1"
+//	appsv1 "k8s.io/api/apps/v1alpha1"
+//	corev1 "k8s.io/api/core/v1alpha1"
 //	"k8s.io/apimachinery/pkg/api/errors"
-//	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+//	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1alpha1"
 //	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 //	"k8s.io/apimachinery/pkg/util/wait"
-//	appsinformers "k8s.io/client-go/informers/apps/v1"
+//	appsinformers "k8s.io/client-go/informers/apps/v1alpha1"
 //	"k8s.io/client-go/kubernetes"
 //	"k8s.io/client-go/kubernetes/scheme"
-//	typedcorev1 "k8s.io/client-go/kubernetes/typed/core/v1"
-//	appslisters "k8s.io/client-go/listers/apps/v1"
+//	typedcorev1 "k8s.io/client-go/kubernetes/typed/core/v1alpha1"
+//	appslisters "k8s.io/client-go/listers/apps/v1alpha1"
 //	"k8s.io/client-go/tools/cache"
 //	"k8s.io/client-go/tools/record"
 //	"k8s.io/client-go/util/workqueue"
 //	"k8s.io/klog"
 //
-//	//_  "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1"
+//	//_  "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1alpha1"
 //	_  "github.com/razzvan91/cnat_obosit/pkg/client/clientset/versioned/scheme"
 //	//informers "infor"/
 //
-//	//samplev1alpha1 "k8s.io/sample-controller/pkg/apis/samplecontroller/v1"
+//	//samplev1alpha1 "k8s.io/sample-controller/pkg/apis/samplecontroller/v1alpha1"
 //	//clientset "k8s.io/sample-controller/pkg/generated/clientset/versioned"
 //	//samplescheme "k8s.io/sample-controller/pkg/generated/clientset/versioned/scheme"
-//	//informers "k8s.io/sample-controller/pkg/generated/informers/externalversions/samplecontroller/v1"
-//	//listers "k8s.io/sample-controller/pkg/generated/listers/samplecontroller/v1"
+//	//informers "k8s.io/sample-controller/pkg/generated/informers/externalversions/samplecontroller/v1alpha1"
+//	//listers "k8s.io/sample-controller/pkg/generated/listers/samplecontroller/v1alpha1"
 //)
 //
 //const controllerAgentName = "cnat-controller"

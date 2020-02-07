@@ -2,4 +2,4 @@
 // +k8s:defaulter-gen=TypeMeta
 // +groupName=cnat.io
 
-package v1
+package v1alpha1
