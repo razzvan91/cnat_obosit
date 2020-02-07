@@ -1,11 +1,8 @@
-package v1alpha1
+package v1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
-
-// +genclient
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 const (
 	PhasePending = "PENDING"
@@ -13,7 +10,19 @@ const (
 	PhaseDone    = "DONE"
 )
 
-// AtSpec defines the desired state of At
+// +genclient
+// +genclient:noStatus
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+type At struct {
+	// At runs a command at a given schedule.
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+
+	Spec   AtSpec   `json:"spec,omitempty"`
+	Status AtStatus `json:"status,omitempty"`
+}
+
 type AtSpec struct {
 	// Schedule is the desired time the command is supposed to be executed.
 	// Note: the format used here is UTC time https://www.utctime.net
@@ -31,21 +40,7 @@ type AtStatus struct {
 	// Important: Run "make" to regenerate code after modifying this file
 }
 
-// +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-
-// At runs a command at a given schedule.
-type At struct {
-	metav1.TypeMeta   `json:",inline"`
-	metav1.ObjectMeta `json:"metadata,omitempty"`
-
-	Spec   AtSpec   `json:"spec,omitempty"`
-	Status AtStatus `json:"status,omitempty"`
-}
-
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-
-// AtList contains a list of At
 type AtList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`

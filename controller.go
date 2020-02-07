@@ -19,7 +19,7 @@ package main
 //
 //import (
 //	"fmt"
-//	//_ "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1alpha1"
+//	//_ "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1"
 //	clientset "github.com/razzvan91/cnat_obosit/pkg/client/clientset/versioned"
 //	"time"
 //
@@ -39,15 +39,15 @@ package main
 //	"k8s.io/client-go/util/workqueue"
 //	"k8s.io/klog"
 //
-//	//_  "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1alpha1"
+//	//_  "github.com/razzvan91/cnat_obosit/pkg/apis/cnat/v1"
 //	_  "github.com/razzvan91/cnat_obosit/pkg/client/clientset/versioned/scheme"
 //	//informers "infor"/
 //
-//	//samplev1alpha1 "k8s.io/sample-controller/pkg/apis/samplecontroller/v1alpha1"
+//	//samplev1alpha1 "k8s.io/sample-controller/pkg/apis/samplecontroller/v1"
 //	//clientset "k8s.io/sample-controller/pkg/generated/clientset/versioned"
 //	//samplescheme "k8s.io/sample-controller/pkg/generated/clientset/versioned/scheme"
-//	//informers "k8s.io/sample-controller/pkg/generated/informers/externalversions/samplecontroller/v1alpha1"
-//	//listers "k8s.io/sample-controller/pkg/generated/listers/samplecontroller/v1alpha1"
+//	//informers "k8s.io/sample-controller/pkg/generated/informers/externalversions/samplecontroller/v1"
+//	//listers "k8s.io/sample-controller/pkg/generated/listers/samplecontroller/v1"
 //)
 //
 //const controllerAgentName = "cnat-controller"
